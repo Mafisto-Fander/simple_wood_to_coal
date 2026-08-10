@@ -1,0 +1,33 @@
+---------------------------------------------------------------------------------------------------
+Version: 1.2.0
+Date: 2026-08-10
+  Info:
+    - What?
+---------------------------------------------------------------------------------------------------
+Version: 1.1.1
+Date: 2025-02-23
+  Changes:
+    - updated to 2.0 (`result = "foo"` must be `results = {{type="item", name="foo", amount=12}}`)
+    - moved woodtocoal.lua to prototypes/recipes/ (typical for other mods, too)
+    - separated recipe and technology
+    - added German (I speak it) locale
+    - missing POSIX new-line on EOF added
+    - added this changelog.txt
+    - imported change-log from mod page
+---------------------------------------------------------------------------------------------------
+Version: 1.1.0
+Date: 2020-12-12
+  Fixes:
+    - Updated to version 1.1
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+Date: 2020-10-10
+  Fixes:
+    - updated to 1.0
+    - also changed the way how wood is made into coal
+    - now Furnaces are used instead of Assemblers
+---------------------------------------------------------------------------------------------------
+Version: 0.18.0
+Date: 2016-03-16
+  Features:
+    - Initial version. 
