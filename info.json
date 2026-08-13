@@ -4,6 +4,6 @@
   "title": "Simple Wood to Coal",
   "author": "mafisto",
   "description": "Adds a recipe for turning wood/wooden chest into coal/carbon in the furnace, without research. Now with settings!",
-  "dependencies": ["base >= 2.0"],
+  "dependencies": ["base >= 2.0.0", "?space-age >= 2.0.0"],
   "factorio_version": "2.0"
 }

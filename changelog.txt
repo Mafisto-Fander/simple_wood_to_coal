@@ -1,8 +1,10 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.0
-Date: 2026-08-10
+Date: 2026-08-13
   Info:
-    - What?
+    - added a choice between 4 recipes
+    - added trigger technology (crafting kind, although I wanted mining kind)
+    - Code refactoring(to the best of my ability)
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.1
 Date: 2025-02-23
@@ -10,7 +12,7 @@ Date: 2025-02-23
     - updated to 2.0 (`result = "foo"` must be `results = {{type="item", name="foo", amount=12}}`)
     - moved woodtocoal.lua to prototypes/recipes/ (typical for other mods, too)
     - separated recipe and technology
-    - added German (I speak it) locale
+    - added German locale
     - missing POSIX new-line on EOF added
     - added this changelog.txt
     - imported change-log from mod page
