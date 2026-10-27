@@ -1,10 +1,5 @@
 --recipes
 
-  local enabled = true
-  if settings.startup["Technology"].value then
-    enabled = false
-  end
-
 --Wood to coal
   local WoodtoCoal = 
     {
@@ -15,12 +10,12 @@
     energy_required = 3.2,
     subgroup = "raw-material",
     main_product = "coal",
-    category = "smelting",
+    categories = {"smelting"},
     order = "a",
     allow_decomposition = false,
     auto_recycle = false,
     allow_productivity = true,
-    enabled = enabled
+    enabled = true
     }
 --Wooden chest to coal
   local ChesttoCoal = 
@@ -32,12 +27,12 @@
     energy_required = 3.2,
     subgroup = "raw-material",
     main_product = "coal",
-    category = "smelting",
+    categories = {"smelting"},
     order = "a",
     allow_decomposition = false,
     auto_recycle = false,
     allow_productivity = true,
-    enabled = enabled
+    enabled = true
     }
 --Wood to carbon
   local WoodtoCarbon = 
@@ -49,12 +44,12 @@
     energy_required = 3.2,
     subgroup = "raw-material",
     main_product = "carbon",
-    category = "smelting",
+    categories = {"smelting"},
     order = "a",
     allow_decomposition = false,
     auto_recycle = false,
     allow_productivity = true,
-    enabled = enabled
+    enabled = true
     }
 --Wooden chest to carbon
   local ChesttoCarbon = 
@@ -66,27 +61,26 @@
     energy_required = 3.2,
     subgroup = "raw-material",
     main_product = "carbon",
-    category = "smelting",
+    categories = {"smelting"},
     order = "a",
     allow_decomposition = false,
     auto_recycle = false,
     allow_productivity = true,
-    enabled = enabled
+    enabled = true
     }   
 --Settings values
-  --local RecList = {}
-    if settings.startup["Recipe"].value == "wood-to-coal" then
-      --table.insert(RecList, WoodtoCoal)
-      data:extend{WoodtoCoal}
-    elseif settings.startup["Recipe"].value == "chest-to-coal" then
-      --table.insert(RecList, ChesttoCoal)
-      data:extend{ChesttoCoal}
-    elseif (settings.startup["Recipe"].value == "wood-to-carbon" and mods["space-age"]) then
-      --table.insert(RecList, WoodtoCarbon)
-      data:extend{WoodtoCarbon}
-    elseif (settings.startup["Recipe"].value == "chest-to-carbon"and mods["space-age"]) then
-      --table.insert(RecList, ChesttoCarbon)
-      data:extend{ChesttoCarbon}
-    end
---Data extend
-  --data:extend{RecList}
+  if settings.startup["WoodtoCoal"].value then
+    data:extend{WoodtoCoal}
+  end
+
+  if settings.startup["ChesttoCoal"].value then
+    data:extend{ChesttoCoal}
+  end
+
+  if (settings.startup["WoodtoCarbon"].value and mods["space-age"]) then
+    data:extend{WoodtoCarbon}
+  end
+
+  if (settings.startup["ChesttoCarbon"].value and mods["space-age"]) then
+    data:extend{ChesttoCarbon}
+  end
