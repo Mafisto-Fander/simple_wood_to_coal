@@ -77,10 +77,12 @@
     data:extend{ChesttoCoal}
   end
 
-  if (settings.startup["WoodtoCarbon"].value and mods["space-age"]) then
-    data:extend{WoodtoCarbon}
-  end
+  if mods["space-age"] then
+    if settings.startup["WoodtoCarbon"].value then
+      data:extend{WoodtoCarbon}
+    end
 
-  if (settings.startup["ChesttoCarbon"].value and mods["space-age"]) then
-    data:extend{ChesttoCarbon}
+    if settings.startup["ChesttoCarbon"].value then
+      data:extend{ChesttoCarbon}
+    end
   end
