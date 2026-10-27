@@ -1,32 +1,41 @@
 --settings
 
---Add recipe with Space Age
-  local RecVal = {"wood-to-coal", "chest-to-coal"}
-  if mods["space-age"] then
-    table.insert(RecVal, "wood-to-carbon")
-    table.insert(RecVal, "chest-to-carbon")
-  end
-
---Сhange which recipe is used
-  local WhatRec = 
-    {
-    type = "string-setting",
-    name = "Recipe",
-    setting_type = "startup",
-    allowed_values = RecVal,
-    default_value = "wood-to-coal",
-    order = "simple_wood_to_coal-a-a"
-    }
-
---Change whether technology is present 
-  local Tech =   
+--Choose what recipes to implement
+  local WoodtoCoal =
     {
     type = "bool-setting",
-    name = "Technology",
+    name = "WoodtoCoal",
+    setting_type = "startup",
+    default_value = true,
+    order = "simple_wood_to_coal-a-a"
+    }
+  local ChesttoCoal =
+    {
+    type = "bool-setting",
+    name = "ChesttoCoal",
     setting_type = "startup",
     default_value = false,
     order = "simple_wood_to_coal-b-a"
     }
+  local WoodtoCarbon =
+    {
+    type = "bool-setting",
+    name = "WoodtoCarbon",
+    setting_type = "startup",
+    default_value = false,
+    order = "simple_wood_to_coal-c-a"
+    }
+  local ChesttoCarbon =
+    {
+    type = "bool-setting",
+    name = "ChesttoCarbon",
+    setting_type = "startup",
+    default_value = false,
+    order = "simple_wood_to_coal-d-a"
+    }
 
 --Data extend
-  data:extend{WhatRec, Tech}
+  data:extend{WoodtoCoal, ChesttoCoal}
+  if mods["space-age"] then
+    data:extend{WoodtoCarbon, ChesttoCarbon}
+  end
